@@ -6,7 +6,7 @@ const config = {
   title: "Scripts Setup",
   tagline: "Scripts Setup",
   url: "https://website.com",
-  baseUrl: "/",
+  baseUrl: "/help/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
