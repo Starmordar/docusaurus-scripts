@@ -57,6 +57,14 @@ const config = {
         style: "dark",
         copyright: `Copyright © ${new Date().getFullYear()} Setup Storage. Built with Docusaurus.`,
       },
+      prism: {
+        theme: require("prism-react-renderer/themes/dracula"),
+      },
+      colorMode: {
+        defaultMode: "light",
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
     }),
 };
 
