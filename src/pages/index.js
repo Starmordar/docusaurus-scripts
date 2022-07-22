@@ -1,25 +1,52 @@
-import React from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import React from "react";
+import { Link } from "react-router-dom";
+import clsx from "clsx";
 
-import styles from './index.module.css';
+import Layout from "@theme/Layout";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import SearchBar from "@easyops-cn/docusaurus-search-local/dist/client/client/theme/SearchBar/SearchBar";
+
+import HomepageFeatures from "../components/HomepageFeatures";
+
+import styles from "./index.module.css";
+
+const popularArticles = [
+  {
+    name: "HTTP Squid Proxy",
+    link: "proxy-section/squid-proxy",
+  },
+  {
+    name: "SOCKS Dante Proxy",
+    link: "proxy-section/dante-proxy",
+  },
+];
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const getPopularArticlesJSX = () =>
+    popularArticles.map((article, index) =>
+      index === popularArticles.length - 1 ? (
+        <>
+          <Link to={article.link}>{article.name}</Link>
+          ...
+        </>
+      ) : (
+        <>
+          <Link to={article.link}>{article.name}</Link>,{" "}
+        </>
+      )
+    );
+
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header
+      className={clsx(styles.heroBanner, styles.hero, styles["hero--primary"])}
+    >
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
+        <h1 className={styles["hero__title"]}>How can we help?</h1>
+        <div className="search-main-page">
+          <SearchBar handleSearchBarToggle={() => {}} />
+        </div>
+        <div className={styles["hero__links"]}>
+          Popular articles: {getPopularArticlesJSX()}
         </div>
       </div>
     </header>
@@ -27,11 +54,13 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
+
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`Welcome to ${siteConfig.title}`}
+      description="Description will go into a meta tag in <head />"
+    >
       <HomepageHeader />
       <main>
         <HomepageFeatures />
