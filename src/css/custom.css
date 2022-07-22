@@ -1,0 +1,214 @@
+:root {
+  --ifm-color-primary: #3f51b5;
+  --ifm-color-primary-dark: #3949a3;
+  --ifm-color-primary-darker: #36459a;
+  --ifm-color-primary-darkest: #2c397f;
+  --ifm-color-primary-light: #4c5ec1;
+  --ifm-color-primary-lighter: #5566c4;
+  --ifm-color-primary-lightest: #707ecd;
+  --ifm-code-font-size: 90%;
+
+  --ifm-font-family-monospace: "Ubuntu";
+  --ifm-font-family-base: "Ubuntu";
+}
+
+.search-main-page {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar__items > .navbar__search {
+  display: none;
+}
+
+.navbar__items .search-block {
+  display: block;
+}
+
+.navbar__search-input {
+  border-radius: 10px;
+}
+
+.footer {
+  background-color: var(--ifm-footer-background-color);
+  color: var(--ifm-footer-color);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  --ifm-footer-background-color: #f7f7f7;
+  --ifm-footer-color: #535461;
+  --ifm-footer-link-color: var(--ifm-color-secondary);
+  --ifm-footer-title-color: var(--ifm-color-white);
+
+  color: #535461;
+  padding: 2rem;
+
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.token-line .token.plain {
+  margin: 0 1px;
+}
+
+.footer--dark {
+  --ifm-footer-background-color: #f7f7f7;
+  --ifm-footer-color: #535461;
+  --ifm-footer-link-color: var(--ifm-color-secondary);
+  --ifm-footer-title-color: var(--ifm-color-white);
+}
+
+.footer,
+.footer--dark {
+  z-index: 2;
+}
+
+.main-wrapper {
+  flex: none !important;
+}
+
+.search-main-page .navbar__search-input {
+  border: 1px solid rgb(219, 219, 219);
+  background-color: #ffffff;
+  height: 40px;
+}
+
+.navbar__items .navbar__search-input {
+  background-color: #f9f9fa;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme="dark"] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.search-main-page > div > span > span[role="listbox"] {
+  max-height: 300px;
+  overflow: auto;
+}
+
+/* Article, TODO: Remove to article styles */
+
+article header {
+  display: none;
+}
+
+.content {
+  width: 100%;
+}
+
+.submenu-block {
+  display: none;
+}
+
+.submenu-title {
+  margin-left: 16px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: #313541;
+}
+
+.toc-macro {
+  position: static;
+}
+
+.toc-indentation {
+  font-size: 0.9rem;
+}
+
+.toc-indentation li {
+  margin: 0.5rem 0.5rem;
+}
+
+.toc-indentation > li > a {
+  color: #525860;
+  font-size: 13px;
+}
+
+.toc-indentation > li > a:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.confluence-embedded-file > .title {
+  display: block;
+}
+
+.theme-doc-markdown {
+  width: 100%;
+}
+
+.submenu > .toc-macro > strong {
+  font-weight: normal;
+}
+
+@media (min-width: 997px) {
+  .search-main-page .navbar__search-input {
+    width: 35rem;
+  }
+
+  .navbar__items .navbar__search-input {
+    width: 25rem;
+  }
+
+  #main-content > .toc-macro {
+    display: none;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .toc-indentation li {
+    margin: 16px;
+  }
+
+  .submenu {
+    max-height: calc(100% - 155px);
+    overflow-y: auto;
+  }
+
+  .submenu-block {
+    display: block;
+    position: fixed;
+    top: 137px;
+    height: 100vh;
+    width: 18%;
+    right: 0px;
+  }
+
+  .toc-indentation {
+    list-style: none !important;
+  }
+
+  .submenu > .toc-macro > .toc-indentation,
+  .submenu > .toc-macro > strong > .toc-indentation {
+    padding-left: 20px;
+    word-wrap: break-word;
+  }
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  src: url("../../static/assets/fonts/Ubuntu-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 500;
+  src: url("../../static/assets/fonts/Ubuntu-Medium.ttf") format("truetype");
+}

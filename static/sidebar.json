@@ -1,0 +1,33 @@
+[
+  {
+    "type": "doc",
+    "label": "Intro",
+    "id": "intro"
+  },
+  {
+    "type": "category",
+    "label": "Setup Proxy",
+    "link": {
+      "type": "doc",
+      "id": "proxy-section/intro"
+    },
+    "collapsed": true,
+    "items": [
+      {
+        "type": "doc",
+        "label": "HTTP Squid Proxy",
+        "id": "proxy-section/squid-proxy"
+      },
+      {
+        "type": "doc",
+        "label": "SOCKS Dante Proxy",
+        "id": "proxy-section/dante-proxy"
+      },
+      {
+        "type": "doc",
+        "label": "Proxy Chaining Setup",
+        "id": "proxy-section/proxy-chaining"
+      }
+    ]
+  }
+]
